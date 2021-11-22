@@ -8,31 +8,34 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <span class="title">Welcome to rock, paper, scissors</span>
-  <span class="message">Play:</span>
-  <div class="buttonContainer">
-    <button class="rpsButton rock">Rock</button>
-    <button class="rpsButton paper">Paper</button>
-    <button class="rpsButton scissors">Scissors</button>
-  </div>
-  <div class="scoreBoard">
-    <div>
-      <span>Player:</span>
-      <span class="playerScore">0</span>
+  <div class="outerContainer">
+    <span class="title">Rock Paper Scissors</span>
+    <span class="message"></span>
+    <button class="newGameButton">Start New Game</button>
+    <div class="buttonContainer">
+      <button class="rpsButton rock">Rock</button>
+      <button class="rpsButton paper">Paper</button>
+      <button class="rpsButton scissors">Scissors</button>
     </div>
-    <div>
-      <span>Computer:</span>
-      <span class="computerScore">0</span>
+    <div class="scoreBoard">
+      <div>
+        <span>Player:</span>
+        <span class="playerScore">0</span>
+      </div>
+      <div>
+        <span>Computer:</span>
+        <span class="computerScore">0</span>
+      </div>
     </div>
-  </div>
-  <div class="gameResultsContainer">
-    <div class="currentGameResults">
+    <div class="gameResultsContainer">
+      <div class="currentGameResults">
 
-    </div>
-    <div class="currentRoundResults">
+      </div>
+      <div class="currentRoundResults">
 
+      </div>
     </div>
+    <script src="rockPaperScissors.js"></script>
   </div>
-  <script src="rockPaperScissors.js"></script>
 </body>
 </html>
