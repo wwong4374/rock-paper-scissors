@@ -1,0 +1,58 @@
+/* COLORS
+#2945ff
+#344df4
+#3e55ea
+#4b5edb
+#5465d4
+#5e6dc9
+#6974bf
+#747cb4
+#7e84a9
+#898c9f */
+
+body {
+  display: flex;
+  /* height: 100%; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e55ea;
+}
+
+.title {
+  margin: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.message {
+  margin: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+
+.scoreBoard,
+.buttonContainer {
+  display: flex;
+  width: 550px;
+  justify-content: space-between;
+}
+
+.scoreBoard {
+  font-size: 25px;
+}
+
+.rpsButton {
+  margin: 30px;
+  width: 150px;
+  height: 50px;
+  background-color: #5e6dc9;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
