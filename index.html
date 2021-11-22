@@ -11,11 +11,27 @@
   <div class="outerContainer">
     <span class="title">Rock Paper Scissors</span>
     <span class="message"></span>
-    <button class="newGameButton">Start New Game</button>
+    <div class="gameResultsContainer">
+      <div class="currentGameResults">
+
+      </div>
+      <div class="selectionDisplay">
+        <div class="playerSelection">🤜</div>
+        <div class="versus">vs</div>
+        <div class="computerSelection">🤛</div>
+      </div>
+      <!-- <div class="currentRoundContainer">
+        <div class="currentRoundTitle">This round's winner:</div>
+        <div class="currentRoundWinner">Player</div>
+      </div> -->
+    </div>
     <div class="buttonContainer">
       <button class="rpsButton rock">Rock</button>
       <button class="rpsButton paper">Paper</button>
       <button class="rpsButton scissors">Scissors</button>
+      <!-- <button class="rpsButton rock">🪨</button>
+        <button class="rpsButton paper">📄</button>
+        <button class="rpsButton scissors">✂️</button> -->
     </div>
     <div class="scoreBoard">
       <div>
@@ -27,14 +43,7 @@
         <span class="computerScore">0</span>
       </div>
     </div>
-    <div class="gameResultsContainer">
-      <div class="currentGameResults">
-
-      </div>
-      <div class="currentRoundResults">
-
-      </div>
-    </div>
+    <button class="newGameButton">New Game</button>
     <script src="rockPaperScissors.js"></script>
   </div>
 </body>

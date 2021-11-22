@@ -4,11 +4,26 @@
 /* eslint-disable arrow-body-style */
 // const playerOptions = ['rock', 'paper', 'scissors'];
 const computerOptions = ['Rock', 'Paper', 'Scissors'];
+let currentRoundWinner = '';
 let playerScore = 0;
 let computerScore = 0;
 const pointsToWin = 5;
+const emojis = {
+  Rock: '🪨',
+  Paper: '📄',
+  Scissors: '✂️',
+  leftFist: '🤜',
+  rightFist: '🤛'
+};
 
 // HELPER FUNCTIONS
+const assignEmojis = (playerSelection, computerSelection) => {
+  const playerEmoji = document.querySelector('div.playerSelection');
+  const computerEmoji = document.querySelector('div.computerSelection');
+  playerEmoji.textContent = emojis[playerSelection];
+  computerEmoji.textContent = emojis[computerSelection];
+};
+
 const updateScoreBoard = () => {
   const playerScoreDisplay = document.querySelector('span.playerScore');
   const computerScoreDisplay = document.querySelector('span.computerScore');
@@ -21,11 +36,10 @@ const resetScoreBoard = () => {
   computerScore = 0;
   updateScoreBoard();
   const message = document.querySelector('span.message');
-  message.textContent = 'Let\'s play!';
+  message.textContent = 'First to 5 wins... ';
 };
 
 const handleGameEnd = () => {
-  // resetScoreBoard();
   const buttons = document.querySelectorAll('button.rpsButton');
   buttons.forEach((button) => {
     button.removeEventListener('click', handleRPSButtonClick);
@@ -34,13 +48,13 @@ const handleGameEnd = () => {
 
 const handlePlayerWins = () => {
   const message = document.querySelector('span.message');
-  message.textContent = 'Player wins!';
+  message.textContent = 'Player won the game!';
   handleGameEnd();
 };
 
 const handleComputerWins = () => {
   const message = document.querySelector('span.message');
-  message.textContent = 'Computer wins';
+  message.textContent = 'Computer won the game!';
   handleGameEnd();
 };
 
@@ -65,35 +79,36 @@ const computerPlay = () => {
 // GAMEPLAY FUNCTIONS
 const playRound = (playerSelection, computerSelection = computerPlay()) => {
   let message = '';
+  assignEmojis(playerSelection, computerSelection);
   if (playerSelection === computerSelection) {
-    message = `Tie! Both played ${playerSelection}.`;
+    message = 'Tie!';
   }
 
   if (playerSelection === 'Rock') {
     if (computerSelection === 'Scissors') {
       playerScore++;
-      message = 'Player won! Rock beats Scissors.';
+      message = 'Player won this round!';
     } else if (computerSelection === 'Paper') {
       computerScore++;
-      message = 'Player lost! Paper beats Rock.';
+      message = 'Player lost this round!';
     }
   }
   if (playerSelection === 'Paper') {
     if (computerSelection === 'Rock') {
       playerScore++;
-      message = 'Player won! Paper beats Rock.';
+      message = 'Player won this round!';
     } else if (computerSelection === 'Scissors') {
       computerScore++;
-      message = 'Player lost! Scissors beats Paper.';
+      message = 'Player lost this round!';
     }
   }
   if (playerSelection === 'Scissors') {
     if (computerSelection === 'Paper') {
       playerScore++;
-      message = 'Player won! Scissors beats Paper.';
+      message = 'Player won this round!';
     } else if (computerSelection === 'Rock') {
       computerScore++;
-      message = 'Player lost! Rock beats Scissors.';
+      message = 'Player lost this round!';
     }
   }
   updateScoreBoard();
@@ -109,7 +124,7 @@ const handleRPSButtonClick = (e) => {
 
 const startNewGame = () => {
   resetScoreBoard();
-  // let playerSelection = '';
+  assignEmojis('leftFist', 'rightFist');
   const buttons = document.querySelectorAll('button.rpsButton');
   buttons.forEach((button) => {
     button.addEventListener('click', handleRPSButtonClick);
