@@ -4,9 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link href="style.css" rel="stylesheet"></link>
+  <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <script src="rockPaperScissors.js"></script>
+  <div class="outerContainer">
+    <span class="title">Rock Paper Scissors</span>
+    <span class="message"></span>
+    <div class="gameResultsContainer">
+      <div class="currentGameResults">
+
+      </div>
+      <div class="selectionDisplay">
+        <div class="playerSelection">🤜</div>
+        <div class="versus">vs</div>
+        <div class="computerSelection">🤛</div>
+      </div>
+      <!-- <div class="currentRoundContainer">
+        <div class="currentRoundTitle">This round's winner:</div>
+        <div class="currentRoundWinner">Player</div>
+      </div> -->
+    </div>
+    <div class="buttonContainer">
+      <button class="rpsButton rock">Rock</button>
+      <button class="rpsButton paper">Paper</button>
+      <button class="rpsButton scissors">Scissors</button>
+      <!-- <button class="rpsButton rock">🪨</button>
+        <button class="rpsButton paper">📄</button>
+        <button class="rpsButton scissors">✂️</button> -->
+    </div>
+    <div class="scoreBoard">
+      <div>
+        <span>Player:</span>
+        <span class="playerScore">0</span>
+      </div>
+      <div>
+        <span>Computer:</span>
+        <span class="computerScore">0</span>
+      </div>
+    </div>
+    <button class="newGameButton">New Game</button>
+    <script src="rockPaperScissors.js"></script>
+  </div>
 </body>
 </html>
