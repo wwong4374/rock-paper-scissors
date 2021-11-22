@@ -4,7 +4,6 @@
 /* eslint-disable arrow-body-style */
 // const playerOptions = ['rock', 'paper', 'scissors'];
 const computerOptions = ['Rock', 'Paper', 'Scissors'];
-let currentRoundWinner = '';
 let playerScore = 0;
 let computerScore = 0;
 const pointsToWin = 5;
