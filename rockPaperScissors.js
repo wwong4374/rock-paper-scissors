@@ -89,7 +89,7 @@ const playRound = (playerSelection, computerSelection = computerPlay()) => {
       message = 'Player won this round!';
     } else if (computerSelection === 'Paper') {
       computerScore++;
-      message = 'Player lost this round!';
+      message = 'Computer won this round!';
     }
   }
   if (playerSelection === 'Paper') {
@@ -98,7 +98,7 @@ const playRound = (playerSelection, computerSelection = computerPlay()) => {
       message = 'Player won this round!';
     } else if (computerSelection === 'Scissors') {
       computerScore++;
-      message = 'Player lost this round!';
+      message = 'Computer won this round!';
     }
   }
   if (playerSelection === 'Scissors') {
@@ -107,7 +107,7 @@ const playRound = (playerSelection, computerSelection = computerPlay()) => {
       message = 'Player won this round!';
     } else if (computerSelection === 'Rock') {
       computerScore++;
-      message = 'Player lost this round!';
+      message = 'Computer won this round!';
     }
   }
   updateScoreBoard();
